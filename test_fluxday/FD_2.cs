@@ -29,7 +29,7 @@ namespace test_2018
         public void SetUp()
         {
             driver.Navigate().GoToUrl("https://fluxday.io/");
-
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         [OneTimeTearDown]
@@ -67,7 +67,7 @@ namespace test_2018
 
             Assert.AreEqual("+Task",
                 driver.FindElement(By.CssSelector("body > div.fixed > nav > section > ul.right > li > a")).Text);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            
             // Assert.AreEqual("OPENSOURCE TASK & PRODUCTIVITY MANAGEMENT TOOL FOR STARTUPS\r\nFluxday was developed by Foradian starting in 2014 and was a critical part of Foradian’s hyper growth and success. Fluxday is engineered based on the concepts of OKR - Objectives and Key Results.\r\n\r\nDownload now",
             // driver.FindElement(By.ClassName("col-lg-12")).Text);
 

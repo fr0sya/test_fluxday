@@ -29,6 +29,7 @@ namespace test_2018
         public void SetUp()
         {
             driver.Navigate().GoToUrl("https://app.fluxday.io/users/sign_in");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         [OneTimeTearDown]

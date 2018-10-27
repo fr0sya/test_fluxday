@@ -27,6 +27,7 @@ namespace test_2018
         public void SetUp()
         {
             driver.Navigate().GoToUrl("https://fluxday.io/");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         [OneTimeTearDown]
