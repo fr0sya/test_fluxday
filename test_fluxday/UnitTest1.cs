@@ -33,7 +33,7 @@ namespace test_2018
         [OneTimeTearDown]
         public void AfterAllMethods()
         {
-           // driver.Quit();
+            driver.Quit();
         }
 
 
