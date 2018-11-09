@@ -73,12 +73,25 @@ namespace test_fluxday
             driver.FindElement(By.CssSelector("#select2-drop > div > input")).SendKeys("Uzity Development");
             driver.FindElement(By.CssSelector("body > div.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active > ul")).Click();
 
-            //select start date
-          //  driver.FindElement(By.Id("select team")).Click();
-          //  driver.FindElement(By.CssSelector("body > div:nth-child(3) > div.xdsoft_datepicker.active > div.xdsoft_mounthpicker > div.xdsoft_label.xdsoft_year > span")).Click();
+            // task_start_date 
+            //              !!! didn't work correctly !!!
+            driver.FindElement(By.Id("task_start_date")).Click();
+            driver.FindElement(By.Id("task_start_date")).Clear();
+            driver.FindElement(By.Id("task_start_date")).SendKeys("2016/07/01 16:33");
+            Thread.Sleep(5000);
 
 
-            //   task_start_date
+            //   task_end_date
+          //  driver.FindElement(By.Id("task_end_date")).Click();
+         //   driver.FindElement(By.Id("task_end_date")).Clear();
+           // driver.FindElement(By.Id("task_end_date")).SendKeys(Keys.Delete);
+           // driver.FindElement(By.Id("task_end_date")).SendKeys("2018/11/05 16:33");
+         //   Thread.Sleep(5000);
+
+
+
+
+
             // IWebElement element = driver.FindElement(By.ClassName("select2-chosen"));
             // SelectElement dropdown = new SelectElement(element);
             //dropdown.SelectByText("Uzity Development");
